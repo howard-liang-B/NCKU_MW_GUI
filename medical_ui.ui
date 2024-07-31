@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dentist_app</class>
+ <widget class="QWidget" name="Dentist_app">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1750</width>
+    <height>1075</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Dental app</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font:  &quot;Times New Roman&quot;;
+color: rgb(15, 15, 15);
+background-color: rgb(200, 200, 200);
+</string>
+  </property>
+  <widget class="QSlider" name="slider_zoom_1">
+   <property name="geometry">
+    <rect>
+     <x>589</x>
+     <y>990</y>
+     <width>451</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    border: 2px solid #cccccc; /* 淺灰色邊框 */
+    height: 4px; /* 增加高度以便顯示更清晰 */
+}
+
+QSlider::handle:horizontal {
+    background: #007ad9; /* 藍色手柄 */
+    width: 12px; /* 手柄的寬度 */
+    height: 20px; /* 增加手柄的高度，讓手柄變長 */
+    margin: -10px -6px; /* 調整手柄的位置 */
+    border-radius: 4px; /* 圓角更明顯 */
+    border: 1px solid #007ad9; /* 藍色邊框 */
+}
+
+QSlider::add-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #cce0ff, stop:1 #007ad9); /* 藍色漸變 */
+}
+
+QSlider::sub-page:horizontal {
+    background: #e6f0ff; /* 藍灰色背景 */
+}
+
+QSlider::handle:horizontal:hover {
+    background: #0056a0; /* 更深藍色手柄 */
+    border-color: #0056a0; /* 同樣顏色的邊框 */
+}
+</string>
+   </property>
+   <property name="value">
+    <number>49</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ratio_1">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>990</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ratio 1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_img_path">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>30</y>
+     <width>1271</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    border: 2px solid #b0bec5; /* 中灰藍色邊框 */
+    padding: 5px;
+    background: #e8f0f8; /* 淺藍灰色背景 */
+    color: #1a3a6c; /* 深藍色文字 */
+    border-radius: 16px; /* 圓角邊框 */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Image Path</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_zoom_2">
+   <property name="geometry">
+    <rect>
+     <x>1340</x>
+     <y>990</y>
+     <width>281</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove:horizontal {
+    border: 2px solid #cccccc; /* 淺灰色邊框 */
+    height: 4px; /* 增加高度以便顯示更清晰 */
+}
+
+QSlider::handle:horizontal {
+    background: #007ad9; /* 藍色手柄 */
+    width: 12px; /* 手柄的寬度 */
+    height: 20px; /* 增加手柄的高度，讓手柄變長 */
+    margin: -10px -6px; /* 調整手柄的位置 */
+    border-radius: 4px; /* 圓角更明顯 */
+    border: 1px solid #007ad9; /* 藍色邊框 */
+}
+
+QSlider::add-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #cce0ff, stop:1 #007ad9); /* 藍色漸變 */
+}
+
+QSlider::sub-page:horizontal {
+    background: #e6f0ff; /* 藍灰色背景 */
+}
+
+QSlider::handle:horizontal:hover {
+    background: #0056a0; /* 更深藍色手柄 */
+    border-color: #0056a0; /* 同樣顏色的邊框 */
+}
+</string>
+   </property>
+   <property name="value">
+    <number>49</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_ratio_2">
+   <property name="geometry">
+    <rect>
+     <x>1660</x>
+     <y>990</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ratio 2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_zoom_1">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>990</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Zoom 1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_zoom_2">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>990</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Zoom 2</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>140</y>
+     <width>711</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">QScrollArea {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    border-radius: 12px; /* 邊角圓滑 */
+    background-color: #1e1e1e; /* 深色背景 */
+}
+
+QScrollBar:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 14px; /* 垂直滾動條寬度 */
+}
+
+QScrollBar:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 14px; /* 水平滾動條高度 */
+}
+
+QScrollBar::handle:vertical {
+    background: #4a4a4a; /* 更深的灰色滾動條手柄 */
+    border-radius: 7px; /* 滾動條手柄圓角 */
+}
+
+QScrollBar::handle:horizontal {
+    background: #4a4a4a; /* 更深的灰色滾動條手柄 */
+    border-radius: 7px; /* 滾動條手柄圓角 */
+}
+
+QScrollBar::add-line:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 10px; /* 添加按鈕高度 */
+}
+
+QScrollBar::sub-line:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 10px; /* 減少按鈕高度 */
+}
+
+QScrollBar::add-line:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 10px; /* 添加按鈕寬度 */
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 10px; /* 減少按鈕寬度 */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #1e1e1e; /* 深色背景 */
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: #1e1e1e; /* 深色背景 */
+}
+</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>707</width>
+         <height>807</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_original_img">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>80</y>
+          <width>301</width>
+          <height>651</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #e0e0e0; /* 更深的淺灰色背景 */
+    border: 2px solid #7d7d7d; /* 深灰色邊框 */
+    border-radius: 10px; /* 邊角圓滑 */
+    padding: 5px; /* 內邊距 */
+}
+
+QLabel::image {
+    border-radius: 8px; /* 圖片邊角圓滑 */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>1210</x>
+     <y>140</y>
+     <width>521</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QScrollArea" name="scrollArea_2">
+      <property name="styleSheet">
+       <string notr="true">QScrollArea {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    border-radius: 12px; /* 邊角圓滑 */
+    background-color: #1e1e1e; /* 深色背景 */
+}
+
+QScrollBar:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 14px; /* 垂直滾動條寬度 */
+}
+
+QScrollBar:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 14px; /* 水平滾動條高度 */
+}
+
+QScrollBar::handle:vertical {
+    background: #4a4a4a; /* 更深的灰色滾動條手柄 */
+    border-radius: 7px; /* 滾動條手柄圓角 */
+}
+
+QScrollBar::handle:horizontal {
+    background: #4a4a4a; /* 更深的灰色滾動條手柄 */
+    border-radius: 7px; /* 滾動條手柄圓角 */
+}
+
+QScrollBar::add-line:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 10px; /* 添加按鈕高度 */
+}
+
+QScrollBar::sub-line:vertical {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    height: 10px; /* 減少按鈕高度 */
+}
+
+QScrollBar::add-line:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 10px; /* 添加按鈕寬度 */
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 1px solid #2c2c2c; /* 深灰色邊框 */
+    background: #2e2e2e; /* 深灰色背景 */
+    width: 10px; /* 減少按鈕寬度 */
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #1e1e1e; /* 深色背景 */
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: #1e1e1e; /* 深色背景 */
+}
+</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>517</width>
+         <height>807</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_crop_tooth">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>90</y>
+          <width>311</width>
+          <height>611</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #e0e0e0; /* 更深的淺灰色背景 */
+    border: 2px solid #7d7d7d; /* 深灰色邊框 */
+    border-radius: 10px; /* 邊角圓滑 */
+    padding: 5px; /* 內邊距 */
+}
+
+QLabel::image {
+    border-radius: 8px; /* 圖片邊角圓滑 */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>560</y>
+     <width>361</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_phone">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Phone Number:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_phone">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 2px solid #cce0ff; /* 淺藍色邊框 */
+    padding: 5px;
+    background: #f0f4ff; /* 藍灰色背景 */
+    color: #003366; /* 更深的藍色文字 */
+    border-radius: 10px;
+    selection-background-color: #007ad9; /* 藍色選擇背景 */
+    selection-color: #f0f4ff; /* 藍灰色選擇文字 */
+}
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PMingLiU'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>890</y>
+     <width>341</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Status:</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>450</y>
+     <width>361</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_14">
+    <item>
+     <widget class="QLabel" name="label_patient_name">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Patient Name:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_name">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 2px solid #cce0ff; /* 淺藍色邊框 */
+    padding: 5px;
+    background: #f0f4ff; /* 藍灰色背景 */
+    color: #003366; /* 更深的藍色文字 */
+    border-radius: 10px;
+    selection-background-color: #007ad9; /* 藍色選擇背景 */
+    selection-color: #f0f4ff; /* 藍灰色選擇文字 */
+}
+</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QProgressBar" name="progressBar_status">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>990</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar {
+    border: 2px solid #cce0ff; /* 淺藍色邊框 */
+    padding: 2px;
+    text-align: center;
+    background: #f0f4ff; /* 藍灰色背景 */
+    color: #003366; /* 深藍色文字 */
+    border-radius: 10px;
+}
+
+QProgressBar::chunk {
+    background: #007ad9; /* 藍色填充 */
+    border-radius: 10px;
+}
+</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>670</y>
+     <width>361</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <item>
+     <widget class="QLabel" name="label_note">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Note:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_note">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 2px solid #cce0ff; /* 淺藍色邊框 */
+    padding: 5px;
+    background: #f0f4ff; /* 藍灰色背景 */
+    color: #003366; /* 更深的藍色文字 */
+    border-radius: 10px;
+    selection-background-color: #007ad9; /* 藍色選擇背景 */
+    selection-color: #f0f4ff; /* 藍灰色選擇文字 */
+}
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PMingLiU'; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>340</y>
+     <width>361</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QLabel" name="label_excel_name">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Excel Name:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_excel_name">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 2px solid #cce0ff; /* 淺藍色邊框 */
+    padding: 5px;
+    background: #f0f4ff; /* 藍灰色背景 */
+    color: #003366; /* 更深的藍色文字 */
+    border-radius: 10px;
+    selection-background-color: #007ad9; /* 藍色選擇背景 */
+    selection-color: #f0f4ff; /* 藍灰色選擇文字 */
+}
+</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_select_img">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>141</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>13</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    margin: 6px;
+    background-color: #97CBFF;
+    border: 2px solid #ECF5FF;
+    border-radius: 15px;
+    color: #272727;
+}
+
+QPushButton::hover {
+    background-color: #2894FF;
+}
+
+QPushButton::pressed {
+    background-color: #005BB5;
+    color: #FFFFFF;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>select</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images/images.qrc">
+     <normaloff>:/images/select_4.png</normaloff>
+     <normalon>:/images/select_5.png</normalon>:/images/select_4.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_CEJ_ALC_color">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>270</y>
+     <width>371</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>** CEJ Points (Green)、ALC Points (Red) **</string>
+   </property>
+   <property name="indent">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_select_tooth">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>180</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* style for the QComboBox */
+#comboBox {
+    border: 1px solid #c0c8d0; /* 淺藍灰色邊框 */
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: #f0f4f8; /* 藍灰色背景 */
+    color: #003366; /* 深藍色文字 */
+}
+
+/* style for drop down area */
+#comboBox::drop-down {
+    border: 1px solid #c0c8d0; /* 淺藍灰色邊框 */
+    border-top: 0; /* 去除下拉箭頭上方的邊框 */
+}
+
+/* style for drop down arrow */
+#comboBox::down-arrow {
+    image: url(:/images/arrow-down-icon.png);
+    width: 20px;
+    height: 20px;
+    background-color: #e0e4e8; /* 淺藍灰色背景 */
+    border: 1px solid #c0c8d0; /* 淺藍灰色邊框 */
+    border-radius: 4px; /* 邊框圓角 */
+}
+
+/* style for QComboBox after open select menu */
+#comboBox::down-arrow:on {
+    background-color: #d0d8e0; /* 當打開選單時的背景色 */
+}
+
+/* style for list menu */
+#comboBox QListView {
+    font-size: 12px;
+    border: 1px solid #c0c8d0; /* 淺藍灰色邊框 */
+    padding: 5px;
+    background-color: #f0f4f8; /* 藍灰色背景 */
+    outline: 0; /* 移除 outline */
+}
+
+/* style for list items */
+#comboBox QListView::item {
+    padding-left: 10px;
+    background-color: #f0f4f8; /* 藍灰色背景 */
+    color: #003366; /* 深藍色文字 */
+}
+
+#comboBox QListView::item:hover {
+    background-color: #c0d4e0; /* 淺藍色背景 */
+    color: #003366; /* 深藍色文字 */
+}
+
+#comboBox QListView::item:selected {
+    background-color: #003366; /* 深藍色背景 */
+    color: #f0f4f8; /* 藍灰色文字 */
+}
+</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <item>
+    <property name="text">
+     <string>Tooth 1</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton_export">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>100</y>
+     <width>200</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+                margin: 6px;
+                background-color: #97CBFF;
+                border: 2px solid #ECF5FF;
+                border-radius: 15px;
+                color: #272727;
+            }
+
+            QPushButton::hover {
+                background-color: #2894FF;
+            }
+
+            QPushButton::pressed {
+                background-color: #005BB5;
+                color: #FFFFFF;
+            }</string>
+   </property>
+   <property name="text">
+    <string>Export Excel</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images/images.qrc">
+     <normaloff>:/images/export_3.png</normaloff>
+     <normalon>:/images/export_4.png</normalon>:/images/export_3.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>38</width>
+     <height>34</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_import">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>200</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    margin: 6px;
+    background-color: #97CBFF;
+    border: 2px solid #ECF5FF;
+    border-radius: 15px;
+    color: #272727;
+}
+
+QPushButton::hover {
+    background-color: #2894FF;
+}
+
+QPushButton::pressed {
+    background-color: #005BB5;
+    color: #FFFFFF;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Import Excel</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images/images.qrc">
+     <normaloff>:/images/import_3.png</normaloff>
+     <normalon>:/images/import_4.png</normalon>:/images/import_3.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>41</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>100</y>
+     <width>141</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>13</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+                margin: 6px;
+                background-color: #97CBFF;
+                border: 2px solid #ECF5FF;
+                border-radius: 15px;
+                color: #272727;
+            }
+
+            QPushButton::hover {
+                background-color: #2894FF;
+            }
+
+            QPushButton::pressed {
+                background-color: #005BB5;
+                color: #FFFFFF;
+            }</string>
+   </property>
+   <property name="text">
+    <string>save</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images/images.qrc">
+     <normaloff>:/images/save_1.png</normaloff>
+     <normalon>:/images/save_3.png</normalon>:/images/save_1.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
